@@ -11,13 +11,15 @@ export default function Pictify(props) {
 	// creating a reference to the div with the id of textContainer.
 	const textContainer = useRef(null);
 
-	// convert HTML into image
 	const downloadImage = async () => {
+		/* taking the text and replacing the spaces with dashes. */
+		const downloadName = text.split(' ').join('-');
+		/* converting the HTML into an image. */
 		const dataUrl = await htmlToImage.toPng(textContainer.current);
 
 		// download image
 		const link = document.createElement('a');
-		link.download = 'html-to-img.png';
+		link.download = `${downloadName}.png`;
 		link.href = dataUrl;
 		link.click();
 		console.log(dataUrl, textContainer, link);
