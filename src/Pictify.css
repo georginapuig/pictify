@@ -27,12 +27,15 @@
 }
 
 #domEl {
-  width: 40rem;
+  width: 100vw;
+  /* width: 40rem; */
   height: 40rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f8eddd;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 input[type="color"]::-moz-color-swatch {
