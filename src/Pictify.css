@@ -15,6 +15,18 @@
   padding: .55rem 0;
 }
 
+#textContainer {
+  /* width: 100vw; */
+  width: 40rem;
+  height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8eddd;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+}
+
 .text {
   width: 45%;
   border: none;
@@ -26,16 +38,19 @@
   font-weight: 700;
 }
 
-#domEl {
-  /* width: 100vw; */
-  width: 40rem;
-  height: 40rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f8eddd;
-  overflow-x: hidden;
-  overscroll-behavior-x: none;
+textarea:focus-visible {
+  outline: none;
+}
+
+input[type="color"] {
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  outline: none;
+  padding: 0;
 }
 
 input[type="color"]::-moz-color-swatch {
@@ -54,17 +69,6 @@ input[type="color"]::-webkit-color-swatch-wrapper {
   padding: 0;
 }
 
-input[type="color"] {
-  cursor: pointer;
-  width: 2.5rem;
-  height: 2.5rem;
-  border: none;
-  background-color: transparent;
-  border-radius: 50%;
-  outline: none;
-  padding: 0;
-}
-
 .downloadBtn {
   cursor: pointer;
   display: inline-flex;
@@ -76,8 +80,4 @@ input[type="color"] {
   background-color: black;
   color: white;
   font-weight: 600;
-}
-
-textarea:focus-visible {
-  outline: none;
 }

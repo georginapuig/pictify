@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import './Pictify.css';
 import arrowDown from './arrow-small-down.svg';
 import * as htmlToImage from 'html-to-image';
@@ -8,19 +8,19 @@ export default function Pictify(props) {
 	const [text, setText] = useValuesState('type to change');
 	const [color, setColor] = useValuesState('#5d6d81');
 
-	// creating a reference to the div with the id of domEl.
-	const domEl = useRef(null);
+	// creating a reference to the div with the id of textContainer.
+	const textContainer = useRef(null);
 
 	// convert HTML into image
 	const downloadImage = async () => {
-		const dataUrl = await htmlToImage.toPng(domEl.current);
+		const dataUrl = await htmlToImage.toPng(textContainer.current);
 
 		// download image
 		const link = document.createElement('a');
 		link.download = 'html-to-img.png';
 		link.href = dataUrl;
 		link.click();
-		console.log(dataUrl, domEl, link);
+		console.log(dataUrl, textContainer, link);
 	};
 
 	return (
@@ -51,8 +51,8 @@ export default function Pictify(props) {
 			</div>
 
 			<div
-				id='domEl'
-				ref={domEl}
+				id='textContainer'
+				ref={textContainer}
 				style={{ backgroundColor: props.backgroundColor }}>
 				<textarea
 					style={{ color: color }}

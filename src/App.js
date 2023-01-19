@@ -1,20 +1,15 @@
 import Pictify from './Pictify';
-import React, { useState } from 'react';
+import useValuesState from './hooks/useValuesState';
 
 import './App.css';
 
 function App() {
-	const [backgroundColor, setBackgroundColor] = useState('#f8eddd');
-
-	const handleChangeBg = e => {
-		setBackgroundColor(e.target.value);
-		console.log(e.target.value);
-	};
+	const [backgroundColor, setBackgroundColor] = useValuesState('#f8eddd');
 
 	return (
 		<div className='App' style={{ backgroundColor: backgroundColor }}>
 			<Pictify
-				handleChangeBg={handleChangeBg}
+				handleChangeBg={setBackgroundColor}
 				backgroundColor={backgroundColor}
 			/>
 		</div>
