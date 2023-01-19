@@ -21,7 +21,7 @@
   background-color: transparent;
   color: #5d6d81;
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 3.3rem;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
 }
@@ -42,7 +42,6 @@ input[type="color"]::-moz-color-swatch {
   width: 2.5rem;
   height: 2.5rem;
   border: none;
-  background-color: #fff;
   border-radius: 50%;
   padding: 0;
 }
@@ -51,8 +50,7 @@ input[type="color"]::-webkit-color-swatch-wrapper {
   width: 2.5rem;
   height: 2.5rem;
   border: none;
-  background-color: #fff;
-  border-radius: 50%;
+  border-radius: 16px;
   padding: 0;
 }
 

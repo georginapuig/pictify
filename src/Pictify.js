@@ -2,21 +2,14 @@ import React, { useRef, useState } from 'react';
 import './Pictify.css';
 import arrowDown from './arrow-small-down.svg';
 import * as htmlToImage from 'html-to-image';
+import useValuesState from './hooks/useValuesState';
 
 export default function Pictify(props) {
-	const [text, setText] = useState('type to change');
-	const [color, setColor] = useState('#5d6d81');
+	const [text, setText] = useValuesState('type to change');
+	const [color, setColor] = useValuesState('#5d6d81');
 
 	// creating a reference to the div with the id of domEl.
 	const domEl = useRef(null);
-
-	const handleChange = e => {
-		setText(e.target.value);
-	};
-
-	const handleChangeColor = e => {
-		setColor(e.target.value);
-	};
 
 	// convert HTML into image
 	const downloadImage = async () => {
@@ -44,7 +37,7 @@ export default function Pictify(props) {
 					type='color'
 					name='textColor'
 					id='textColor'
-					onChange={handleChangeColor}
+					onChange={setColor}
 					value={color}
 				/>
 				<button className='downloadBtn' onClick={downloadImage}>
@@ -66,7 +59,7 @@ export default function Pictify(props) {
 					className='text'
 					name='text'
 					value={text}
-					onChange={handleChange}
+					onChange={setText}
 					cols='30'
 					rows='auto'></textarea>
 			</div>
