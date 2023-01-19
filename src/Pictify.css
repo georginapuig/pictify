@@ -27,8 +27,8 @@
 }
 
 #domEl {
-  width: 100vw;
-  /* width: 40rem; */
+  /* width: 100vw; */
+  width: 40rem;
   height: 40rem;
   display: flex;
   justify-content: center;
