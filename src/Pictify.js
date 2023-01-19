@@ -1,12 +1,13 @@
 import React, { useRef, useState } from 'react';
 import './Pictify.css';
-import arrowDown from './arrow-circle-down.svg';
+import arrowDown from './arrow-small-down.svg';
 import * as htmlToImage from 'html-to-image';
 
 export default function Pictify(props) {
 	const [text, setText] = useState('type to change');
 	const [color, setColor] = useState('#5d6d81');
 
+	// creating a reference to the div with the id of domEl.
 	const domEl = useRef(null);
 
 	const handleChange = e => {
@@ -47,7 +48,12 @@ export default function Pictify(props) {
 					value={color}
 				/>
 				<button className='downloadBtn' onClick={downloadImage}>
-					<img src={arrowDown} alt='test' />
+					<img
+						style={{ marginRight: '.35rem' }}
+						src={arrowDown}
+						alt='arrow-down'
+					/>
+					Download image
 				</button>
 			</div>
 
