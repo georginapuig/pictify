@@ -1,0 +1,75 @@
+.Pictify {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.PictifyBtns {
+  width: 13rem;
+  background-color: #4040401a;
+  border-radius: 16px;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  padding: .3rem;
+}
+
+.text {
+  width: 45%;
+  border: none;
+  background-color: transparent;
+  color: #5d6d81;
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+}
+
+#domEl {
+  width: 40rem;
+  height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8eddd;
+}
+
+input[type="color"]::-moz-color-swatch {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
+
+input[type="color"]::-moz-color-swatch-wrapper {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.downloadBtn {
+  cursor: pointer;
+  display: inline-flex;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+}
+
+input[type="color"] {
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 0;
+}
+
+textarea:focus-visible {
+  outline: none;
+}
