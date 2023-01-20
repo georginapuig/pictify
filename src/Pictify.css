@@ -15,7 +15,7 @@
   padding: .55rem 0;
 }
 
-#textContainer {
+#TextContainer {
   /* width: 100vw; */
   width: 40rem;
   height: 40rem;
@@ -27,7 +27,7 @@
   overscroll-behavior-x: none;
 }
 
-.text {
+.Text {
   width: 45%;
   border: none;
   background-color: transparent;
@@ -69,7 +69,7 @@ input[type="color"]::-webkit-color-swatch-wrapper {
   padding: 0;
 }
 
-.downloadBtn {
+.DownloadBtn {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -80,4 +80,16 @@ input[type="color"]::-webkit-color-swatch-wrapper {
   background-color: black;
   color: white;
   font-weight: 600;
+}
+
+.Interrogation {
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+}
+
+.InterrogationIcon {
+  display: inline;
+  vertical-align: -moz-middle-with-baseline;
+  vertical-align: sub;
 }

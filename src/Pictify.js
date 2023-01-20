@@ -36,7 +36,7 @@ export default function Pictify(props) {
 					value={props.backgroundColor}
 				/>
 				<Input name='textColor' onChange={setColor} value={color} />
-				<Button buttonClass='downloadBtn' onClickBtn={downloadImage}>
+				<Button buttonClass='DownloadBtn' onClickBtn={downloadImage}>
 					<img
 						style={{ marginRight: '.35rem' }}
 						src={arrowDown}
@@ -47,12 +47,12 @@ export default function Pictify(props) {
 			</div>
 
 			<div
-				id='textContainer'
+				id='TextContainer'
 				ref={textContainer}
 				style={{ backgroundColor: props.backgroundColor }}>
 				<textarea
 					style={{ color: color }}
-					className='text'
+					className='Text'
 					name='text'
 					value={text}
 					onChange={setText}
