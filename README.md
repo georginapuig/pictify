@@ -7,7 +7,7 @@
 * [Setup](#setup)
 
 ## General info
-Download image from html
+Type your quote and download it as image
 
 How to use: 
 1. type
