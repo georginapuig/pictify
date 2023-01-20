@@ -3,6 +3,8 @@ import './Pictify.css';
 import arrowDown from './arrow-small-down.svg';
 import * as htmlToImage from 'html-to-image';
 import useValuesState from './hooks/useValuesState';
+import Button from './Button';
+import Input from './Input';
 
 export default function Pictify(props) {
 	const [text, setText] = useValuesState('type to change');
@@ -28,28 +30,20 @@ export default function Pictify(props) {
 	return (
 		<div className='Pictify'>
 			<div className='PictifyBtns'>
-				<input
-					type='color'
+				<Input
 					name='backgroundColor'
-					id='backgroundColor'
 					onChange={props.handleChangeBg}
 					value={props.backgroundColor}
 				/>
-				<input
-					type='color'
-					name='textColor'
-					id='textColor'
-					onChange={setColor}
-					value={color}
-				/>
-				<button className='downloadBtn' onClick={downloadImage}>
+				<Input name='textColor' onChange={setColor} value={color} />
+				<Button buttonClass='downloadBtn' onClickBtn={downloadImage}>
 					<img
 						style={{ marginRight: '.35rem' }}
 						src={arrowDown}
 						alt='arrow-down'
 					/>
 					Download image
-				</button>
+				</Button>
 			</div>
 
 			<div
