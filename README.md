@@ -7,7 +7,7 @@
 * [Setup](#setup)
 
 ## General info
-Type your quote and download it as image
+Type your [quote](https://www.instagram.com/wetheurban/?hl=en) and download it as image
 
 How to use: 
 1. type
