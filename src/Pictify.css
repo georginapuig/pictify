@@ -16,19 +16,19 @@
 }
 
 #TextContainer {
-  /* width: 100vw; */
   width: 40rem;
   height: 40rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f8eddd;
-  overflow-x: hidden;
-  overscroll-behavior-x: none;
+  overflow: hidden;
+  border: 1px solid;
 }
 
 .Text {
-  width: 45%;
+  width: 25rem;
+  height: auto;
   border: none;
   background-color: transparent;
   color: #5d6d81;
@@ -36,6 +36,7 @@
   font-size: 3.3rem;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
+  border: 1px solid;
 }
 
 textarea:focus-visible {
@@ -52,4 +53,10 @@ textarea:focus-visible {
   display: inline;
   vertical-align: -moz-middle-with-baseline;
   vertical-align: sub;
+}
+
+@media only screen and (max-width: 480px) {
+  #TextContainer {
+    width: 100vw;
+  }
 }
