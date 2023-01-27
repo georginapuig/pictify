@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './Pictify.css';
 import arrowDown from './arrow-small-down.svg';
 import * as htmlToImage from 'html-to-image';
@@ -9,6 +9,11 @@ import Input from './Input';
 export default function Pictify(props) {
 	const [text, setText] = useValuesState('type to change');
 	const [color, setColor] = useValuesState('#5d6d81');
+
+	const handleChangeHeight = e => {
+		e.target.style.height = '70px';
+		e.target.style.height = `${e.target.scrollHeight}px`;
+	};
 
 	// creating a reference to the div with the id of textContainer.
 	const textContainer = useRef(null);
@@ -56,6 +61,7 @@ export default function Pictify(props) {
 					name='text'
 					value={text}
 					onChange={setText}
+					onInput={handleChangeHeight}
 					cols='30'
 					rows='auto'></textarea>
 			</div>

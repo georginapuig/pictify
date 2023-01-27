@@ -23,20 +23,18 @@
   align-items: center;
   background-color: #f8eddd;
   overflow: hidden;
-  border: 1px solid;
 }
 
 .Text {
   width: 25rem;
-  height: auto;
+  height: 4rem;
   border: none;
   background-color: transparent;
-  color: #5d6d81;
   text-align: center;
   font-size: 3.3rem;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
-  border: 1px solid;
+  resize: none;
 }
 
 textarea:focus-visible {
