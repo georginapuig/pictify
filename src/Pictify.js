@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import './Pictify.css';
 import arrowDown from './arrow-small-down.svg';
 import * as htmlToImage from 'html-to-image';

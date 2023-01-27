@@ -1,60 +1,66 @@
 .Pictify {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .PictifyBtns {
-  width: 20rem;
-  background-color: #4040401a;
-  border-radius: 16px;
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: .55rem 0;
+	width: 20rem;
+	background-color: #4040401a;
+	border-radius: 16px;
+	margin-top: 2rem;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 0.55rem 0;
 }
 
 #TextContainer {
-  width: 40rem;
-  height: 40rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f8eddd;
-  overflow: hidden;
+	width: 40rem;
+	height: 40rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f8eddd;
+	overflow: hidden;
 }
 
 .Text {
-  width: 25rem;
-  height: 4rem;
-  border: none;
-  background-color: transparent;
-  text-align: center;
-  font-size: 3.3rem;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 700;
-  resize: none;
+	width: 25rem;
+	height: 4rem;
+	border: none;
+	background-color: transparent;
+	text-align: center;
+	font-size: 3.3rem;
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: 700;
+	resize: none;
 }
 
 textarea:focus-visible {
-  outline: none;
+	outline: none;
 }
 
 .Interrogation {
-  position: absolute;
-  top: 3rem;
-  right: 2rem;
+	position: absolute;
+	top: 3rem;
+	right: 2rem;
 }
 
 .InterrogationIcon {
-  display: inline;
-  vertical-align: -moz-middle-with-baseline;
-  vertical-align: sub;
+	display: inline;
+	vertical-align: -moz-middle-with-baseline;
+	vertical-align: sub;
 }
 
 @media only screen and (max-width: 480px) {
-  #TextContainer {
-    width: 100vw;
-  }
+	#TextContainer {
+		width: 100vw;
+	}
+
+	.Text {
+		width: 70%;
+		height: 3.5rem;
+		font-size: 2.55rem;
+	}
 }
