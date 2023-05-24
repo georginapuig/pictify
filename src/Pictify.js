@@ -7,13 +7,13 @@ import Button from './Button';
 import Input from './Input';
 
 export default function Pictify(props) {
-	const [text, setText] = useValuesState('type to change');
-	const [color, setColor] = useValuesState('#5d6d81');
+	const [text, setText] = useValuesState('click & type');
+  const [color, setColor] = useValuesState('#5d6d81');
 
-	const handleChangeHeight = e => {
-		e.target.style.height = '70px';
-		e.target.style.height = `${e.target.scrollHeight}px`;
-	};
+  const handleChangeHeight = (e) => {
+    e.target.style.height = '70px';
+    e.target.style.height = `${e.target.scrollHeight}px`;
+  };
 
 	// creating a reference to the div with the id of textContainer.
 	const textContainer = useRef(null);
